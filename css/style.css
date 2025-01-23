@@ -1,0 +1,57 @@
+#nav {
+    background-color: aqua;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline-block; /* Keep inline-block for list items */
+    position: relative; /* To position the dropdown relative to this item */
+}
+
+li a {
+    text-decoration: none; /* Remove underline from links */
+    display: block;
+    padding: 10px 20px;
+}
+
+.flex-container {
+    display: flex;
+    background-color: DodgerBlue;
+}
+
+.flex-container > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.dropdown-container {
+    position: relative; /* Make it a reference for positioning */
+}
+
+.dropdown {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Absolute positioning for dropdown */
+    left: 0;
+    top: 100%; /* Position dropdown just below the parent list item */
+    background-color: white;
+    width: 150px; /* Set width for the dropdown */
+    border: 1px solid #ccc; /* Optional border */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Optional shadow */
+    z-index: 1; /* Ensure it appears above other elements */
+}
+
+.dropdown li {
+    padding: 10px;
+    display: block; /* Make the dropdown items stack vertically */
+}
+
+.dropdown-container:hover .dropdown {
+    display: block; /* Show the dropdown on hover */
+}
